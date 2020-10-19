@@ -9,6 +9,7 @@ loop do
 
   if guess == number
     puts "You're correct! My number is #{number}"
+    break
   elsif guess < number
     puts "Higher!"
   else
