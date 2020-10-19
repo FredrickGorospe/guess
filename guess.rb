@@ -5,9 +5,14 @@ puts "I'm thinking of a number from 1 to 100"
 
 acc = 0
 
-loop do 
+loop do
+  begin
   print "Guess my number!! "
-  guess = gets.to_i
+  guess = Integer(gets)
+ rescue ArgumentError
+  puts "Invalid input. You must enter a number."
+  retry
+ end
   acc += 1
 
   if guess == number
